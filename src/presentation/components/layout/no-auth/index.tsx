@@ -1,13 +1,38 @@
 import React from 'react'
-import { ContainerStyled, RowStyled } from './styles'
+import { Ouros, Copas, Espadas } from '../../../assets/svgs'
+import { theme } from '../../../styles/theme'
+import CardBackground from '../../card-background'
+import * as S from './styles'
 
 function LoginLayout({ children }: any): JSX.Element {
   return (
-    <ContainerStyled fluid>
-      <RowStyled className="h-100">
+    <S.ContainerStyled fluid>
+      <S.ContainerCards>
+
+        <CardBackground
+          valor="A"
+          color={theme.colors.red}
+          icon={<Ouros />}
+        />
+
+        <CardBackground
+          valor="A"
+          color={theme.colors.red}
+          icon={<Copas />}
+        />
+
+        <CardBackground
+          valor="A"
+          color={theme.colors.black}
+          icon={<Espadas />}
+        />
+
+      </S.ContainerCards>
+
+      <S.RowStyled className="h-100">
         {children}
-      </RowStyled>
-    </ContainerStyled>
+      </S.RowStyled>
+    </S.ContainerStyled>
   )
 }
 
