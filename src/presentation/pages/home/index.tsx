@@ -1,10 +1,16 @@
 import React from 'react'
+import { InfoModal } from '../../components'
+import * as S from './styles'
 
-function Home(): JSX.Element {
+type HomeProps = {
+  submit: (name: string) => void
+}
+
+function Home({ submit }: HomeProps): JSX.Element {
   return (
-    <div>
-      Hello World
-    </div>
+    <S.Container>
+      <InfoModal submit={submit} />
+    </S.Container>
   )
 }
 

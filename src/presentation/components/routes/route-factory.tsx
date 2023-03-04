@@ -1,6 +1,9 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/function-component-definition */
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import {
+  Route, Routes, useNavigate,
+} from 'react-router-dom'
 import { useAuth } from '../../../contexts/auth-context/auth-context'
 
 type RouteFactoryProps = {
@@ -18,16 +21,18 @@ type RouteFactoryProps = {
 
 const ProtectedRoute = (props: any): any => {
   const { user } = useAuth()
-  if (!user) {
-    return
+  const navigate = useNavigate()
+  const notAllowed = !user || !user?.name
+
+  useEffect(() => {
+    if (notAllowed) {
+      navigate('/')
+    }
+  }, [notAllowed, navigate])
+
+  if (notAllowed) {
+    return null
   }
-
-  const allowed = !!user?.name
-
-  if (!allowed) {
-    return
-  }
-
   // eslint-disable-next-line consistent-return
   return props.children
 }
@@ -40,7 +45,6 @@ export const RouteFactory: React.FC<RouteFactoryProps> = ({
       pages.map(({ path, component: Component, ...page }: any) => (
         <Route
           key={`${page.exact}`}
-          path={path}
           element={page.auth
             ? (
               <ProtectedRoute>
@@ -55,6 +59,7 @@ export const RouteFactory: React.FC<RouteFactoryProps> = ({
               </Layout>
             )}
           {...page}
+          path={path}
           exact={page.exact || true}
         />
       ))
