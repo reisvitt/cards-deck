@@ -17,7 +17,6 @@ export const ContainerCards = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
-  transform: translateY(-7vh);
 
   >:nth-child(1) {
     transform: translateX(30px) rotate3d(1,1,1, -12deg) translateY(15px);
@@ -48,4 +47,6 @@ export const RowStyled = styled(Row)`
   height: 100vh;
   position: relative; 
   z-index: 2;
+  backdrop-filter: ${(props) => (props.auth ? 'blur(6px)' : 'initial')};
+  overflow: auto;
 `

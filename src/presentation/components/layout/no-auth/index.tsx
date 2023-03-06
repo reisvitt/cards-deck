@@ -4,36 +4,36 @@ import { theme } from '../../../styles/theme'
 import CardBackground from '../../card-background'
 import * as S from './styles'
 
-function LoginLayout({ children }: any): JSX.Element {
+function BaseLayout({ children, auth = false }: any): JSX.Element {
   return (
     <S.ContainerStyled fluid>
       <S.ContainerCards>
 
         <CardBackground
-          valor="A"
+          valor="R"
           color={theme.colors.red}
           icon={<Ouros />}
         />
 
         <CardBackground
-          valor="A"
+          valor="M"
           color={theme.colors.red}
           icon={<Copas />}
         />
 
         <CardBackground
-          valor="A"
+          valor="S"
           color={theme.colors.black}
           icon={<Espadas />}
         />
 
       </S.ContainerCards>
 
-      <S.RowStyled className="h-100">
+      <S.RowStyled className="h-100" auth={auth}>
         {children}
       </S.RowStyled>
     </S.ContainerStyled>
   )
 }
 
-export default LoginLayout
+export default BaseLayout
