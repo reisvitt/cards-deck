@@ -19,7 +19,7 @@ function InfoModal({ submit }: InfoModalProps): JSX.Element {
       <S.ContainerInfo onSubmit={handleSubmit}>
         <S.Field>
           <S.InputBox>
-            <Profile size="30px" color="#FFF" />
+            <Profile size="20px" color="#FFF" />
             <S.Input
               required
               type="text"
