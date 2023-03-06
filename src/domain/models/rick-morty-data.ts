@@ -4,10 +4,10 @@ export namespace RickMortyProps {
   export type Model = {
     id: number
     name: string
-    status: STATUS
+    status: `${STATUS}`
     species: string
     type: string
-    gender: GENDER
+    gender: `${GENDER}`
     origin: {
       name: string
       url: string
@@ -20,6 +20,7 @@ export namespace RickMortyProps {
     episode: string[]
     url: string
     created: string
+    points?: number
   }
 
   export type ResponseList = {
