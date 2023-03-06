@@ -1,5 +1,5 @@
 import React from 'react'
-import { AuthProvider } from '../../../contexts/auth-context/auth-context'
+import { AuthProvider } from '../../contexts/auth-context/auth-context'
 import { RouteFactory } from './route-factory'
 
 import { NoAuthLayout, AuthLayout } from '../layout'
