@@ -30,7 +30,7 @@ function InfoModal({ submit }: InfoModalProps): JSX.Element {
           </S.InputBox>
         </S.Field>
 
-        <S.Button type="submit">Continuar</S.Button>
+        <S.Button type="submit">Ver Cartas</S.Button>
       </S.ContainerInfo>
     </S.Container>
   )
