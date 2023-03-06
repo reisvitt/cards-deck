@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import {
   Route, Routes, useNavigate,
 } from 'react-router-dom'
-import { useAuth } from '../../../contexts/auth-context/auth-context'
+import { useAuth } from '../../contexts/auth-context/auth-context'
 
 type RouteFactoryProps = {
   routes: {

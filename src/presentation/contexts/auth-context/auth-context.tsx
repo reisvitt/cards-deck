@@ -3,7 +3,7 @@
 import React, {
   createContext, useContext, useState,
 } from 'react'
-import { UserProps } from '../../domain/models/user'
+import { UserProps } from '../../../domain/models/user'
 
 const AuthContext: any = createContext(null)
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuth } from '../../../../contexts/auth-context/auth-context'
+import { useAuth } from '../../../contexts/auth-context/auth-context'
 import NoAuth from '../no-auth'
 import * as S from './styles'
 
