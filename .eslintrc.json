@@ -48,6 +48,8 @@
     "@typescript-eslint/no-unused-vars": "error",
     "no-useless-constructor": "off",
     "no-redeclare": "off",
+    "no-alert": "off",
+    "no-plusplus": "off",
     "@typescript-eslint/no-redeclare": [
       "error",
       {
