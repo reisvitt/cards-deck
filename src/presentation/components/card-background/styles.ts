@@ -33,7 +33,7 @@ export const Container = styled.div`
 export const NumberTop = styled.div`
   position: absolute;
   left: 15px;
-  top: 15px;
+  top: 10px;
   color: ${(props) => props.color};
   font-size: 2em;
   font-family: initial;
@@ -47,5 +47,5 @@ export const NumberBottom = styled(NumberTop)`
   top: unset;
   left: unset;
   right: 15px;
-  bottom: 15px;
+  bottom: 10px;
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { theme } from '../../../styles/theme'
 
 export const Header = styled.header`
   width: 100%;
@@ -11,7 +12,7 @@ export const Header = styled.header`
 `
 
 export const Name = styled.h4`
-  color: #4c4b60;
+  color: ${theme.colors.primary};
   letter-spacing: 1px;
   font-size: 1.1em;
 `
